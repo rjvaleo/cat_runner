@@ -1,5 +1,5 @@
 {
-  "name": "Cat Runner",
+  "name": "Purr Runner",
   "description": "A classic Lode Runner-style puzzle platformer where you play as a clever cat collecting golden fish while outsmarting barking dogs. Features AI-generated levels powered by Gemini.",
   "requestFramePermissions": []
 }
