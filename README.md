@@ -1,20 +1,59 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Lode Purrer 🐈🐟💨
 
-# Run and deploy your AI Studio app
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75C2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Lucide](https://img.shields.io/badge/Lucide_Icons-FFD700?style=for-the-badge&logo=lucide&logoColor=black)
 
-This contains everything you need to run your app locally.
+**Lode Purrer** is a high-stakes, feline-themed reimagining of the classic *Lode Runner*. Play as a clever cat on a mission to collect every golden fish while outsmarting an escalating army of persistent dogs across 100 unique levels.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1cPGVXNwEjw7lwPXoliPWySoq4wYnmhYx
+## 🌟 Key Features
 
-## Run Locally
+- **100 Unique Levels**: 20 meticulously hand-crafted levels followed by 80 procedurally generated challenges.
+- **Dynamic Difficulty**: Dogs increase in speed by **10% every 10 levels**.
+- **The "Pee" Mechanic**: Press `P` to leave a puddle on the floor. Dogs that step in it are significantly slowed down, giving you time to escape.
+- **AI-Powered Infinite Mode**: Once you pass level 100, the **Google Gemini API** takes over, generating infinite new levels with custom themes on the fly.
+- **Cat Physics**: Precise double-jumping, climbing, and the ability to "claw" through bricks above you (`S` key).
+- **Aesthetic Themes**: Visual styles evolve every 10 levels, culminating in a **Psychedelic RGB** finale for levels 91-100.
 
-**Prerequisites:**  Node.js
+## 🛠️ Technical Stack
 
+- **Framework**: [React 19](https://react.dev/) utilizing modern hooks (`useCallback`, `useRef`, `useEffect`) for a high-performance 60FPS game loop.
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for a responsive, modern UI with custom animations and glassmorphism effects.
+- **Intelligence**: [@google/genai](https://www.npmjs.com/package/@google/genai) (Google Gemini SDK) for advanced procedural level generation and safety-checked grid layouts.
+- **Icons**: [Lucide React](https://lucide.dev/) for crisp, scalable interface elements.
+- **Audio**: Integrated SFX system for immersive feedback (Walking, Jumping, Barking, Gold Collection).
+- **Engine**: Custom-built tile-based physics engine with gravity, terminal velocity, and sub-pixel collision detection.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🎮 Controls
+
+| Action | Key |
+| :--- | :--- |
+| **Move / Climb** | `Arrow Keys` |
+| **Double Jump** | `Spacebar` |
+| **Pee (Slow Dogs)** | `P` |
+| **Dig (Left/Right)** | `Z` / `X` |
+| **Claw (Above)** | `S` |
+
+## 🌈 Level Themes
+
+- **1-10**: Classic Amber (The Beginning)
+- **11-20**: Azure Abyss (Icy Hues)
+- **21-30**: Emerald Forest (Green)
+- **31-40**: Royal Amethyst (Purple)
+- **41-50**: Cyber Neon (Pink Glow)
+- **51-60**: Autumn Blaze (Orange)
+- **61-70**: Danger Zone (Red/Black Stripes)
+- **71-80**: Shadow Deep (Blue/Black Stripes)
+- **81-90**: Peppermint Path (Red/White Pinstripes)
+- **91-100**: **Psychedelic RGB** (Animated cycling with black outlines)
+
+## 🚀 Getting Started
+
+Simply open `index.html` in any modern browser. The app uses ES Modules to load dependencies directly from `esm.sh`, requiring no complex build steps.
+
+*Note: For AI level generation beyond level 100, ensure your environment provides a valid `process.env.API_KEY` for the Google Gemini API.*
+
+---
+*Created with ❤️ by a Senior Frontend Engineer & Cat Lover.*
