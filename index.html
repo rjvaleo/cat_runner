@@ -4,39 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lode Purrer | Feline Puzzle Platformer</title>
-    
-    <!-- 1. Favicon: Inline data-URI to prevent 404 errors on GitHub Pages -->
+    <title>Lode Purrer</title>
+    <!-- Favicon to fix 404 -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐈</text></svg>">
-
-    <!-- 2. Tailwind CSS & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- 3. Babel Standalone: Allows us to use JSX/TypeScript without a build step -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <!-- 4. Production Log Sanitization: Suppress the Tailwind Play CDN warning -->
-    <script>
-      (function() {
-        const originalWarn = console.warn;
-        console.warn = function(...args) {
-          if (typeof args[0] === 'string' && args[0].includes('cdn.tailwindcss.com should not be used in production')) {
-            return;
-          }
-          originalWarn.apply(console, args);
-        };
-      })();
-    </script>
-
     <style>
         body {
             font-family: 'Fredoka', sans-serif;
-            background-color: #09090b;
+            background-color: #1a1a1a;
             color: #ffffff;
             margin: 0;
             overflow: hidden;
-            user-select: none;
         }
         .pixel-font {
             font-family: 'Press+Start+2P', cursive;
@@ -49,30 +28,22 @@
         .floating {
             animation: float 2s ease-in-out infinite;
         }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #09090b; }
-        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
     </style>
-
-    <!-- 5. ESM Import Map -->
-    <script type="importmap">
+<script type="importmap">
 {
   "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
-    "react-dom": "https://esm.sh/react-dom@^19.2.4",
-    "react-dom/client": "https://esm.sh/react-dom@^19.2.4/client",
     "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
   }
 }
 </script>
 </head>
 <body>
     <div id="root"></div>
-    <!-- 6. Application Entry Point: Changed to .js for MIME type safety on GH Pages -->
-    <!-- data-type="module" tells Babel to treat this as an ES module -->
-    <script type="text/babel" data-presets="typescript,react" data-type="module" src="./index.js"></script>
+    <!-- Load the main application module -->
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
