@@ -6,7 +6,7 @@
 ![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75C2?style=for-the-badge&logo=googlegemini&logoColor=white)
 ![Lucide](https://img.shields.io/badge/Lucide_Icons-FFD700?style=for-the-badge&logo=lucide&logoColor=black)
 
-**Lode Purrer** is a high-stakes, feline-themed reimagining of the classic *Lode Runner*. Play as a clever cat on a mission to collect every golden fish while outsmarting an escalating army of persistent dogs across 100 unique levels.
+**Lode Purrer** is a high-stakes, feline-themed reimagining of the classic _Lode Runner_. Play as a clever cat on a mission to collect every golden fish while outsmarting an escalating army of persistent dogs across 100 unique levels.
 
 ## 🌟 Key Features
 
@@ -28,13 +28,13 @@
 
 ## 🎮 Controls
 
-| Action | Key |
-| :--- | :--- |
-| **Move / Climb** | `Arrow Keys` |
-| **Double Jump** | `Spacebar` |
-| **Pee (Slow Dogs)** | `P` |
-| **Dig (Left/Right)** | `Z` / `X` |
-| **Claw (Above)** | `S` |
+| Action               | Key          |
+| :------------------- | :----------- |
+| **Move / Climb**     | `Arrow Keys` |
+| **Double Jump**      | `Spacebar`   |
+| **Pee (Slow Dogs)**  | `P`          |
+| **Dig (Left/Right)** | `Z` / `X`    |
+| **Claw (Above)**     | `S`          |
 
 ## 🌈 Level Themes
 
@@ -51,9 +51,33 @@
 
 ## 🚀 Getting Started
 
-Simply open `index.html` in any modern browser. The app uses ES Modules to load dependencies directly from `esm.sh`, requiring no complex build steps.
+**Run locally:**
 
-*Note: For AI level generation beyond level 100, ensure your environment provides a valid `process.env.API_KEY` for the Google Gemini API.*
+```bash
+npm install
+npm run dev
+```
+
+**Build for production:**
+
+```bash
+npm run build
+```
+
+For AI level generation beyond level 100, create a `.env` file in the project root:
+
+```
+GEMINI_API_KEY=your_key_here
+```
+
+**GitHub Pages deployment** is handled automatically via GitHub Actions on every push to `main`. See [PORTING.md](./PORTING.md) for the full setup guide.
 
 ---
-*Created with ❤️ by a Senior Frontend Engineer & Cat Lover.*
+
+## 🔧 Porting from Google AI Studio
+
+This project was originally exported from Google AI Studio. If you are porting another Studio project to run locally or deploy to GitHub Pages, see **[PORTING.md](./PORTING.md)** for a complete checklist of required changes.
+
+---
+
+_Created with ❤️ by a Senior Frontend Engineer & Cat Lover._
