@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Fredoka", sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 0;
+  overflow: hidden;
+}
+
+.pixel-font {
+  font-family: "Press Start 2P", cursive;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: float 2s ease-in-out infinite;
+}
